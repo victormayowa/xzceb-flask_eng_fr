@@ -1,21 +1,21 @@
 """System module."""
 import unittest
-from translator import frenchToEnglish, englishToFrench
+from translator import translate_french_to_english, englishToFrench
 
 class Testf2e(unittest.TestCase):
-    """ Testf2e """
+    """ Test French to English Translator """
     def test_1(self):
         ''' test_1 '''
-        self.assertEqual(frenchToEnglish('0'), '0')
-        self.assertEqual(frenchToEnglish('Bonjour'), 'Hello')
-        self.assertNotEqual(frenchToEnglish("None"), '')
-        self.assertNotEqual(frenchToEnglish(0), 0)
+        self.assertEqual(translate_french_to_english('0'), '0')
+        self.assertEqual(translate_french_to_english('Bonjour'), 'Hello')
+        self.assertNotEqual(translate_french_to_english("None"), '')
+        self.assertNotEqual(translate_french_to_english(0), 0)
 
 
 class Teste2f(unittest.TestCase):
-    """ Teste2f """
-    def test_1(self):
-        ''' test_1 '''
+    """ Test English to French Translator """
+    def test_2(self):englishToFrench
+        ''' test_2 '''
         self.assertEqual(englishToFrench('0'), '0')
         self.assertEqual(englishToFrench('Hello'), 'Bonjour')
         self.assertNotEqual(englishToFrench("None"), '')
